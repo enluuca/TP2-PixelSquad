@@ -1,0 +1,147 @@
+[
+  {
+    "id": "enzo",
+    "nombre": "Enzo Giangreco",
+    "rol": "Full Stack Developer",
+    "avatar": "avatar-enzo.png",
+    "ubicacion": "Avellaneda, Buenos Aires",
+    "edad": 31,
+    "bio": "Desarrollador en formación con base en full stack. Trabajo con C#, JavaScript, React y Node.js, y tengo experiencia armando aplicaciones completas que conectan frontend, backend and base de datos. Me siento cómodo modelando soluciones con POO y resolviendo problemas prácticos más que quedarme en lo teórico. Estoy en proceso de seguir mejorando mis habilidades y ganar experiencia en proyectos reales.",
+    "habilidades": [
+      { "nombre": "React", "nivel": 85 },
+      { "nombre": "Node.js", "nivel": 75 },
+      { "nombre": "HTML5 / CSS3", "nivel": 90 },
+      { "nombre": "C#", "nivel": 70 },
+      { "nombre": "GitHub", "nivel": 85 }
+    ],
+    "intereses": {
+      "peliculas": ["El Padrino", "Interstellar", "Batman, El caballero de la noche"],
+      "musica": ["Oktubre", "Divididos por la felicidad", "Honestidad Brutal"]
+    },
+    "proyectos": [
+      {
+        "titulo": "Agencia ROS",
+        "descripcion": "Desarrollo de identidad digital y plataforma web para agencia de marketing.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Dashboard Scouting CS2",
+        "descripcion": "Sistema de tracking estadístico y evaluación para jugadores de Counter Strike 2.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Con Vida - Sin TACC",
+        "descripcion": "Plataforma de e-commerce y marketing para panadería libre de gluten.",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "id": "pablo",
+    "nombre": "Pablo Off",
+    "rol": "Backend & Database Developer",
+    "avatar": "avatar-pablo.jpg",
+    "ubicacion": "Buenos Aires, Argentina",
+    "edad": 30,
+    "bio": "Apasionado por la tecnología y preparado para nuevos desafíos intergalácticos. Especialista en arquitectura de datos y optimización de procesos.",
+    "habilidades": [
+      { "nombre": "C# & .NET", "nivel": 80 },
+      { "nombre": "SQL Server", "nivel": 85 },
+      { "nombre": "Node.js", "nivel": 70 },
+      { "nombre": "VFP", "nivel": 75 }
+    ],
+    "intereses": {
+      "peliculas": ["Matrix", "Star Wars", "Hackers"],
+      "musica": ["Daft Punk", "Kraftwerk", "Synthwave"]
+    },
+    "proyectos": [
+      {
+        "titulo": "API de Gestión",
+        "descripcion": "Arquitectura backend para sistema de inventario.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Migración de Datos",
+        "descripcion": "Scripting avanzado para migración de bases VFP a SQL.",
+        "imagen": ""
+      },
+      {
+        "titulo": "ClubDeportivoApp",
+        "descripcion": "Desarrollo de aplicación móvil con Android Studio.",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "id": "alejandro",
+    "nombre": "Alejandro Ramos",
+    "rol": "Java Developer Trainee",
+    "avatar": "avatar-ale.png",
+    "ubicacion": "CABA, Argentina",
+    "edad": 30,
+    "bio": "Comencé mi camino en el mundo de la tecnología como un simple aficionado a los videojuegos. Mientras realizaba cursos, trabajaba en el sector gastronómico como barista. Hoy, a mis 30 años, logré conseguir mi primer trabajo como desarrollador Java trainee. Representa el resultado de mucho esfuerzo, perseverancia y aprendizaje.",
+    "habilidades": [
+      { "nombre": "Java", "nivel": 80 },
+      { "nombre": "Spring Boot", "nivel": 70 },
+      { "nombre": "MySQL", "nivel": 75 },
+      { "nombre": "C#", "nivel": 60 }
+    ],
+    "intereses": {
+      "peliculas": ["Hasta el Último Hombre", "Patch Adams", "Mario Bros"],
+      "musica": ["Hybrid Theory", "Meteora", "Cadáver Exquisito"]
+    },
+    "proyectos": [
+      {
+        "titulo": "API Gestión de Cafetería",
+        "descripcion": "Desarrollo de backend con Spring Boot para el control de inventario y pedidos.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Tracker de Videojuegos",
+        "descripcion": "Aplicación en Java para llevar registro de estadísticas y juegos completados.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Base de Datos Relacional",
+        "descripcion": "Modelado y optimización de base de datos MySQL para sistema de reservas.",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "id": "ivan",
+    "nombre": "Ivan Faigenbom",
+    "rol": "UX/UI & Python Developer",
+    "avatar": "avatar-ivan.png",
+    "ubicacion": "Flores, CABA",
+    "edad": 25,
+    "bio": "Soy un estudiante multidisciplinar: desde la música hasta la programación. Me encanta programar pequeños proyectos que ayuden a resolver problemas de la vida cotidiana.",
+    "habilidades": [
+      { "nombre": "UX/UI", "nivel": 85 },
+      { "nombre": "Python", "nivel": 80 },
+      { "nombre": "SQL", "nivel": 75 },
+      { "nombre": "JavaScript", "nivel": 70 }
+    ],
+    "intereses": {
+      "peliculas": ["El viento se levanta", "Porco Rosso", "La Princesa Mononoke"],
+      "musica": ["Kind of Blue", "Kamikaze", "This old Dog"]
+    },
+    "proyectos": [
+      {
+        "titulo": "Automatización Cotidiana",
+        "descripcion": "Scripts integrados en Python para la resolución de tareas repetitivas y organización del día a día.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Análisis y Gestión de Audio",
+        "descripcion": "Modelado de base de datos relacional con SQL para catalogación de frecuencias y colecciones musicales.",
+        "imagen": ""
+      },
+      {
+        "titulo": "Rediseño de Interfaz UX/UI",
+        "descripcion": "Prototipado interactivo enfocado en mejorar la usabilidad y accesibilidad de plataformas digitales.",
+        "imagen": ""
+      }
+    ]
+  }
+]
