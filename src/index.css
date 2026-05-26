@@ -68,7 +68,7 @@ h1, h2, h3 {
 
 .main-content {
   flex: 1;
-  margin-left: 260px; /* Compensa el ancho de la sidebar */
+  margin-left: 260px;
   padding: 3rem;
   min-height: 100vh;
 }
@@ -136,10 +136,12 @@ h1, h2, h3 {
 .dashboard-grid, .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-  gap: 2rem;
+  gap: 6rem;
+  justify-content: center;
+  margin-top: 10rem;
 }
-
-.card, .data-card {
+/* PERFILES */
+.card{
   background: var(--color-surface);
   backdrop-filter: blur(8px);
   border: 1px solid var(--color-accent);
@@ -151,6 +153,23 @@ h1, h2, h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+/* PELÍCULAS */
+.data-card {
+  background: var(--color-surface);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  gap: 1.2rem;
 }
 
 .card:hover, .data-card:hover {
