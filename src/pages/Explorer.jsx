@@ -52,12 +52,13 @@ export default function Explorer() {
           filteredData.map((peli) => (
             <article key={peli.id} className="data-card">
               <h3>{peli.titulo}</h3>
+              <span className="badge">{peli.genero}</span>
               <div className="data-stats">
-                <span className="badge">{peli.genero}</span>
                 <p><strong>Director:</strong> {peli.director}</p>
                 <p><strong>Año:</strong> {peli.año}</p>
                 <p><strong>IMDb Rating:</strong> ⭐ {peli.rating}</p>
               </div>
+      
             </article>
           ))
         ) : (
