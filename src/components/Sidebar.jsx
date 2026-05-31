@@ -1,11 +1,17 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import isoTipo from '../assets/iso-tipo.png'; // Asegurate de tener estas imágenes en src/assets
+import isoTipo from '../assets/iso-tipo.png';
 import logoTipo from '../assets/logo-tipo.png';
 
+/**
+ * Sidebar Component
+ * Fixed side navigation displaying the brand logo and links to all application routes.
+ * Complies with TP2 Navigation and Branding guidelines.
+ */
 export default function Sidebar() {
   return (
     <aside className="sidebar">
-      {/* Logos */}
+      {/* Isologotipo de PixelSquad */}
       <div className="sidebar-logo-container">
         <picture className="navbar-section-picture">
           <img src={isoTipo} alt="Marca PixelSquad" className="iso-tipo" />
@@ -15,28 +21,32 @@ export default function Sidebar() {
         </picture>
       </div>
 
-      {/* Menú Principal */}
+      {/* Menú Principal de Comando */}
       <nav className="menu-principal">
         <ul>
           <li>
-            {/* NavLink permite saber si la ruta está activa para pintarla de otro color */}
             <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>
-              Inicio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/bitacora" className={({ isActive }) => isActive ? 'active-link' : ''}>
-              Bitácora
+              Inicio (Tripulantes)
             </NavLink>
           </li>
           <li>
             <NavLink to="/explorador" className={({ isActive }) => isActive ? 'active-link' : ''}>
-              Explorador
+              Naves (Local)
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/api-explorer" className={({ isActive }) => isActive ? 'active-link' : ''}>
+              Planetas (API)
             </NavLink>
           </li>
           <li>
             <NavLink to="/galeria" className={({ isActive }) => isActive ? 'active-link' : ''}>
               Galería
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/bitacora" className={({ isActive }) => isActive ? 'active-link' : ''}>
+              Bitácora
             </NavLink>
           </li>
         </ul>
