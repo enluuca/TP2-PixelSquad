@@ -39,36 +39,43 @@
   {
     "id": "pablo",
     "nombre": "Pablo Off",
-    "rol": "Backend & Database Developer",
+    "rol": "Coordinador de Sistemas & Dev IT/OT",
     "avatar": "avatar-pablo.jpg",
-    "ubicacion": "Buenos Aires, Argentina",
-    "edad": 30,
-    "bio": "Apasionado por la tecnología y preparado para nuevos desafíos intergalácticos. Especialista en arquitectura de datos y optimización de procesos.",
+    "ubicacion": "Baradero, Argentina",
+    "edad": 33,
+    "github": "https://github.com/Poff93",
+    "linkedin": "https://www.linkedin.com/in/pablo-off-ab8842bb/",
+    "bio": "Coordinador de Sistemas y Desarrollador Full Stack. Especializado en la convergencia crítica entre IT (Information Technology) y OT (Operational Technology). Lidero la reingeniería de arquitecturas ERP de misión crítica, la coexistencia transaccional legacy/SQL y el despliegue de sistemas MES (Manufacturing Execution System) integrados a controladores PLC en planta para captura de telemetría e industrialización de procesos en tiempo real.",
+    "infoExtra": "Liderazgo de Proyectos y Visión Tecnológica: Especialización en mantenimiento predictivo digital y mitigación de obsolescencia de software (Legacy Software Preservation). El avatar de zorro es una representación simbólica que hace referencia a la destreza requerida para operar y evolucionar sistemas ERP críticos basados en Visual FoxPro (VFP) sin interrumpir la operación del negocio.",
     "habilidades": [
-      { "nombre": "C# & .NET", "nivel": 80 },
-      { "nombre": "SQL Server", "nivel": 85 },
-      { "nombre": "Node.js", "nivel": 70 },
-      { "nombre": "VFP", "nivel": 75 }
+      { "nombre": "Bases de Datos (VFP / SQL Server)", "nivel": 95 },
+      { "nombre": "Integración IT/OT (ERP & PLC)", "nivel": 92 },
+      { "nombre": "Control de Versiones (TortoiseSVN)", "nivel": 90 },
+      { "nombre": "Arquitectura MES & PLC", "nivel": 88 },
+      { "nombre": "Servicios Backend (C# / Node.js)", "nivel": 85 },
+      { "nombre": "Git & GitHub (Repositorios)", "nivel": 70 },
+      { "nombre": "Desarrollo Frontend (React / JS)", "nivel": 65 }
     ],
     "intereses": {
-      "peliculas": ["Matrix", "Star Wars", "Hackers"],
-      "musica": ["Daft Punk", "Kraftwerk", "Synthwave"]
+      "peliculas": ["Iron man", "Top Gun: Maverick", "Red social"],
+      "musica": ["Pequeño Pez", "Chikitoons", "Diego Topa"],
+      "musicaSubtitulo": "En este último año, mi 'stack' musical cambió drásticamente. Tanto en casa como en el auto, mi reproductor entró en un loop infinito donde solo suenan estos tres artistas. Si buscás a los responsables de mi concentración (o de mis distracciones), acá los tenés:"
     },
     "proyectos": [
       {
-        "titulo": "API de Gestión",
-        "descripcion": "Arquitectura backend para sistema de inventario.",
-        "imagen": ""
+        "titulo": "Convergencia MES (ERP & PLC)",
+        "descripcion": "Diseño e implementación de un middleware de comunicación en tiempo real para enlazar los autómatas (PLC) en la línea de montaje de planta con la base de datos centralizada. Conversión de la infraestructura fabril a una arquitectura MES integrada, permitiendo capturar telemetría operativa activa y automatizar la trazabilidad de producción con cero pérdidas de paquetes.",
+        "imagen": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=500&auto=format&fit=crop"
       },
       {
-        "titulo": "Migración de Datos",
-        "descripcion": "Scripting avanzado para migración de bases VFP a SQL.",
-        "imagen": ""
+        "titulo": "Optimización ERP Legacy",
+        "descripcion": "Reingeniería y optimización transaccional del ERP corporativo de misión crítica. Diseño de esquemas de almacenamiento mixto, mantenimiento y refactorización del motor legacy en Visual FoxPro (VFP) en coexistencia con bases de datos relacionales Microsoft SQL Server de alta disponibilidad. Rutinas automáticas de auditoría para garantizar la integridad referencial y prevenir cuellos de botella.",
+        "imagen": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500&auto=format&fit=crop"
       },
       {
-        "titulo": "ClubDeportivoApp",
-        "descripcion": "Desarrollo de aplicación móvil con Android Studio.",
-        "imagen": ""
+        "titulo": "Checklists & Reportes IoT",
+        "descripcion": "Desarrollo y despliegue de una plataforma full-stack para el control de calidad interactivo (checklist de planta) con sincronización fuera de línea (offline-first). Motor de despachos de notificaciones asíncronas para la distribución automatizada de reportes analíticos consolidados en PDF a las gerencias de área.",
+        "imagen": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop"
       }
     ]
   },

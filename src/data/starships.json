@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "nombre": "Halcón Milenario",
+    "modelo": "Carguero Ligero YT-1300",
+    "fabricante": "Corporación de Ingeniería Corelliana",
+    "clase": "Carguero ligero",
+    "velocidad": "105 MGLT",
+    "tripulacion": "4 tripulantes",
+    "descripcion": "La legendaria y veloz nave de Han Solo y Chewbacca, famosa por completar la carrera de Kessel en menos de 12 pársecs.",
+    "imagen": "/img/naves/nave1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Ala-X (X-Wing)",
+    "modelo": "T-65B Ala-X",
+    "fabricante": "Corporación Incom",
+    "clase": "Caza estelar",
+    "velocidad": "100 MGLT",
+    "tripulacion": "1 piloto, 1 droide astromecánico",
+    "descripcion": "El caza estelar insignia de la Alianza Rebelde, equipado con cuatro cañones láser y motores de propulsión de alta maniobrabilidad.",
+    "imagen": "/img/naves/nave2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Caza TIE",
+    "modelo": "Caza de Línea TIE/ln",
+    "fabricante": "Sistemas de Flota Sienar",
+    "clase": "Caza estelar",
+    "velocidad": "105 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "El caza estelar estándar del Imperio Galáctico, característico por el aullido de sus motores de iones gemelos y su falta de escudos protectores.",
+    "imagen": "/img/naves/nave3.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Destructor Estelar",
+    "modelo": "Destructor Estelar Clase Imperial I",
+    "fabricante": "Astilleros de Impulso Kuat",
+    "clase": "Acorazado",
+    "velocidad": "60 MGLT",
+    "tripulacion": "37,085 tripulantes",
+    "descripcion": "El pilar militar de la Armada Imperial. Su imponente silueta triangular es sinónimo del opresivo orden imperial a lo largo de la galaxia.",
+    "imagen": "/img/naves/nave4.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Estrella de la Muerte",
+    "modelo": "Estación de Combate DS-1",
+    "fabricante": "Departamento de Investigación de Armamento Imperial",
+    "clase": "Estación de batalla espacial",
+    "velocidad": "Supercrucero hiperespacial",
+    "tripulacion": "342,953 miembros militares",
+    "descripcion": "Estación espacial militar del tamaño de una luna, diseñada para proyectar el terror imperial con un superláser capaz de destruir planetas enteros.",
+    "imagen": "/img/naves/nave5.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Lanzadera Imperial",
+    "modelo": "Lanzadera Clase Lambda T-4a",
+    "fabricante": "Sistemas de Flota Sienar",
+    "clase": "Nave de transporte",
+    "velocidad": "50 MGLT",
+    "tripulacion": "6 tripulantes",
+    "descripcion": "Transporte blindado de alta seguridad utilizado por dignatarios y oficiales del Imperio, incluyendo a Darth Vader y el Emperador Palpatine.",
+    "imagen": "/img/naves/nave6.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Caza Estelar de Jedi",
+    "modelo": "Interceptor Ligero Delta-7 Aethersprite",
+    "fabricante": "Sistemas de Ingeniería Kuat",
+    "clase": "Caza estelar interceptor",
+    "velocidad": "126 MGLT",
+    "tripulacion": "1 piloto Jedi, 1 droide astromecánico",
+    "descripcion": "Caza ligero y ágil optimizado para los reflejos aumentados por la Fuerza de los miembros de la Orden Jedi.",
+    "imagen": "/img/naves/nave7.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Esclavo I (Slave I)",
+    "modelo": "Patrullero Clase Firespray-31",
+    "fabricante": "Sistemas Kuat de Astilleros",
+    "clase": "Caza estelar de asalto y transporte",
+    "velocidad": "80 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "La infame nave de los cazarrecompensas Jango y Boba Fett, fuertemente armada y equipada con sensores avanzados de ocultación.",
+    "imagen": "/img/naves/nave8.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Interceptor TIE",
+    "modelo": "Interceptor TIE/IN",
+    "fabricante": "Sistemas de Flota Sienar",
+    "clase": "Caza estelar",
+    "velocidad": "125 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "Variante de alto rendimiento del caza TIE clásico, con alas en forma de flecha para mayor visibilidad y equipada con cuatro cañones láser adicionales.",
+    "imagen": "/img/naves/nave9.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Ala-Y (Y-Wing)",
+    "modelo": "Bombardero BTL-A4 Ala-Y",
+    "fabricante": "Corporación Koensayr",
+    "clase": "Caza y bombardero",
+    "velocidad": "80 MGLT",
+    "tripulacion": "1 piloto, 1 droide astromecánico",
+    "descripcion": "Caballo de batalla resistente de la Rebelión, especializado en bombardeo pesado e inutilización de naves mayores mediante torpedos de protones.",
+    "imagen": "/img/naves/nave10.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Ala-A (A-Wing)",
+    "modelo": "Interceptor RZ-1 Ala-A",
+    "fabricante": "Ingeniería Incom-Frei",
+    "clase": "Interceptor de escolta",
+    "velocidad": "120 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "Uno de los cazas más rápidos de la Alianza Rebelde, diseñado expresamente para combates relámpago e intercepción de flotas imperiales.",
+    "imagen": "/img/naves/nave11.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Ala-B (B-Wing)",
+    "modelo": "Caza de Asalto Pesado A/SF-01 Ala-B",
+    "fabricante": "Astilleros Slayn & Korpil",
+    "clase": "Caza estelar de asalto pesado",
+    "velocidad": "90 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "Una nave de asalto pesada con una cabina giroscópica única que permanece estable mientras toda la estructura de la nave rota alrededor de ella.",
+    "imagen": "/img/naves/nave12.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Caza Estelar N-1",
+    "modelo": "Caza Estelar N-1 de Naboo",
+    "fabricante": "Cuerpo de Ingeniería Espacial de Theed",
+    "clase": "Caza estelar",
+    "velocidad": "110 MGLT",
+    "tripulacion": "1 piloto, 1 droide astromecánico",
+    "descripcion": "Elegante y aerodinámico caza de Naboo bañado en cromo real. Combina un diseño estético sofisticado con una letal capacidad de fuego.",
+    "imagen": "/img/naves/nave13.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Tantive IV",
+    "modelo": "Corbeta Consular CR90",
+    "fabricante": "Corporación de Ingeniería Corelliana",
+    "clase": "Corbeta",
+    "velocidad": "95 MGLT",
+    "tripulacion": "30-165 tripulantes",
+    "descripcion": "Nave consular de la senadora Leia Organa, recordada por interceptar y escapar con los planos robados de la Estrella de la Muerte en Scarif.",
+    "imagen": "/img/naves/nave14.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Crucero Estelar Mon Calamari",
+    "modelo": "Crucero Estelar Clase MC80",
+    "fabricante": "Astilleros de los Mon Calamari",
+    "clase": "Crucero estelar de batalla",
+    "velocidad": "60 MGLT",
+    "tripulacion": "5,402 tripulantes",
+    "descripcion": "Crucero de batalla pesado y pacífico readaptado por los Mon Calamari para servir como núcleos defensivos acorazados de la flota rebelde.",
+    "imagen": "/img/naves/nave15.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "Caza del General Grievous",
+    "modelo": "Caza Estelar Clase Belbullab-22",
+    "fabricante": "Talleres de Blindaje Feath",
+    "clase": "Caza estelar pesado",
+    "velocidad": "100 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "Nave personal del líder militar cyborg separatista. Cuenta con un blindaje reforzado, potentes escudos deflectores y cañones triples.",
+    "imagen": "/img/naves/nave16.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "Infiltrador Sith",
+    "modelo": "Nave de Asalto Clase Cimitarra",
+    "fabricante": "Sistemas de Flota Sienar (Desarrollo encubierto)",
+    "clase": "Caza estelar oculto",
+    "velocidad": "115 MGLT",
+    "tripulacion": "1 piloto (Darth Maul)",
+    "descripcion": "La letal nave de infiltración de Darth Maul, equipada con un prototipo experimental de generador de camuflaje que la vuelve invisible a radares y a la vista.",
+    "imagen": "/img/naves/nave17.jpg"
+  },
+  {
+    "id": 18,
+    "nombre": "Fragata Médica Nebulón-B",
+    "modelo": "Fragata de Escolta EF76 Nebulón-B",
+    "fabricante": "Astilleros de Impulso Kuat",
+    "clase": "Fragata de escolta",
+    "velocidad": "40 MGLT",
+    "tripulacion": "854 tripulantes",
+    "descripcion": "Nave hospital y de escolta multipropósito rebelde, famosa por albergar el centro médico donde Luke Skywalker recibió su mano biónica.",
+    "imagen": "/img/naves/nave18.jpg"
+  },
+  {
+    "id": 19,
+    "nombre": "Caza Estelar de Kylo Ren",
+    "modelo": "Silenciador TIE/vn",
+    "fabricante": "Sistemas de Flota Sienar-Jaemus",
+    "clase": "Caza estelar interceptor",
+    "velocidad": "145 MGLT",
+    "tripulacion": "1 piloto",
+    "descripcion": "Caza estelar de élite de la Primera Orden diseñado a la medida de Kylo Ren. Es extremadamente rápido y destructivo, carente de soporte vital para optimizar peso.",
+    "imagen": "/img/naves/nave19.jpg"
+  },
+  {
+    "id": 20,
+    "nombre": "Crucero de Asalto Rebelde",
+    "modelo": "Fragata de Asalto Clase II MC30c",
+    "fabricante": "Astilleros de los Mon Calamari",
+    "clase": "Fragata de asalto rápido",
+    "velocidad": "80 MGLT",
+    "tripulacion": "820 tripulantes",
+    "descripcion": "Fragata ligera especializada en bombardeos a corta distancia y tácticas de emboscada rápida contra Destructores Estelares.",
+    "imagen": "/img/naves/nave20.jpg"
+  }
+]
