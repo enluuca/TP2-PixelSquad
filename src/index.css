@@ -1256,13 +1256,27 @@ h3 {
   height: 40px;
   border-left: 2px solid rgb(var(--orange));
   border-right: 2px solid rgb(var(--orange));
-  border-bottom: 2px solid rgb(var(--orange));
-  box-shadow: 0 4px 8px -4px rgba(var(--orange), 0.5);
-  margin-top: -2px;
-  margin-bottom: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top: 2px solid rgb(var(--orange));
+  box-shadow: 0 -4px 8px -4px rgba(var(--orange), 0.5);
+  margin: 20px auto 30px auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
 }
+
+.tree-connector-hub::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 50px;
+  background: rgb(var(--orange));
+  box-shadow: 0 0 6px rgba(var(--orange), 0.5);
+}
+
+
 
 .flex-wrap {
   flex-wrap: wrap;
