@@ -1,83 +1,102 @@
 # TP2 - React en Equipo | PixelSquad
 
-**Enlace al Proyecto Desplegado:** [Acá pegaremos el link de Vercel cuando hagamos el deploy]
+**Enlace al Proyecto Desplegado:** [tp-2-pixel-squad.vercel.app](https://tp-2-pixel-squad.vercel.app/)
+
+---
 
 ## 1. Descripción del Proyecto
-Este proyecto es una Single Page Application (SPA) desarrollada en React que funciona como el nodo principal de presentación de nuestro equipo, PixelSquad. El objetivo de este desarrollo es aplicar una arquitectura basada en componentes, gestionando rutas dinámicas, estados y consumo de datos locales y externos. Diseñamos una interfaz estilo Dashboard con una estética minimalista, limpia y premium, centrada en la experiencia del usuario (UX).
+Este proyecto es una Single Page Application (SPA) desarrollada en React que funciona como el nodo principal de presentación de nuestro equipo, PixelSquad. El objetivo de este Trabajo Práctico 2 fue evolucionar nuestra web estática anterior hacia una arquitectura basada en componentes, gestionando rutas dinámicas, estados (Hooks) y consumo asíncrono de APIs y datos locales, todo bajo una estética inmersiva de ciencia ficción.
+
+---
 
 ## 2. Integrantes del Equipo
-El equipo "PixelSquad" (Grupo 7 - IFTS N.°29) está conformado de manera definitiva por:
-
 * **Enzo Giangreco** - Full Stack Developer / Frontend & UI/UX | [Perfil de GitHub](https://github.com/enluuca)
-* **Pablo Off** - Backend & Database Developer | [Perfil de GitHub]
+* **Pablo Off** - Backend & Database Developer | [Perfil de GitHub](https://github.com/Poff93)
 * **Alejandro Ramos** - Java Developer Trainee | [Perfil de GitHub]
 * **Ivan Faigenbom** - UX/UI & Python Developer | [Perfil de GitHub]
 
+---
+
 ## 3. Tecnologías Utilizadas
-Para este desarrollo, abandonamos la estructura estática tradicional para montar un entorno moderno y ágil:
-* **Core:** React (con Vite) y JavaScript (ES6+).
-* **Navegación:** React Router DOM (manejo de SPA y parámetros dinámicos).
-* **Estilos:** CSS3 puro con variables nativas (`:root`) para la paleta de diseño.
-* **Iconografía:** Librería `react-icons`.
-* **Datos:** JSON para estructura de datos locales.
+* **Core:** React 19, Vite, JavaScript (ES6+), HTML5, CSS3.
+* **Enrutamiento:** React Router DOM.
+* **Iconografía:** `react-icons` (FontAwesome y SimpleIcons).
+* **Control de Versiones:** Git y GitHub (Flujo de trabajo mediante ramas).
+* **Despliegue:** Vercel.
 
-# 4. Estructura de Archivos
-Organizamos el proyecto bajo una arquitectura modular para separar lógica, vistas y componentes reutilizables:
+---
 
+## 4. Estructura de Archivos
+El proyecto sigue una arquitectura modular para separar responsabilidades:
+
+```text
 src/
-  assets/       # Imágenes, avatares, isologos y recursos estáticos
-  components/   # Componentes reutilizables (Sidebar, TripulanteCard, etc.)
-  context/      # Estados globales de la aplicación (futura escalabilidad)
-  data/         # Archivos JSON locales (team.json, mock_datos.json)
-  hooks/        # Custom hooks para lógica asíncrona y llamadas a APIs
-  pages/        # Vistas principales de la app (Dashboard, Profile, Explorer, etc.)
-  App.jsx       # Enrutador principal y layout base
-  index.css     # Reset, variables y estilos globales
-  main.jsx      # Punto de entrada de React
+ ├── assets/      # Recursos estáticos globales.
+ ├── components/  # Componentes modulares (Sidebar, ProgressBar, ProjectCarousel).
+ ├── data/        # JSON locales (starships.json, team.json).
+ ├── pages/       # Vistas renderizadas por React Router (Dashboard, Profile, JsonExplorer, ApiExplorer, Gallery, Logbook).
+ ├── App.jsx      # Configuración de rutas y layout principal.
+ ├── index.css    # Variables CSS y estilos globales neón.
+ └── main.jsx     # Punto de entrada de la aplicación.
+public/
+ └── img/         # Imágenes estáticas locales para naves y galería.
+```
 
+---
 
 ## 5. Guía de Estilos
-Aplicamos un diseño temático estilo "Archivo Galáctico", inspirado en interfaces de ciencia ficción y la estética de Star Wars, priorizando contrastes altos, fondos oscuros y efectos de neón.
+Aplicamos un diseño temático estilo "Archivo Galáctico", inspirado en interfaces Sci-Fi y Star Wars.
 
-Paleta de Colores (Hexadecimales):**
-    * Fondo Principal y Superficies: `#050505` (Negro profundo)
-    * Texto Principal: `#ffffff` (Blanco con 88% de opacidad)
-    * Texto Secundario: `#a0a0a0` (Blanco con 63% de opacidad)
-    * Acento Principal (Láser/Bordes): `#ffe81f` (Amarillo característico)
-    * Acento Secundario (Hover/Brillos): `#ff6600` (Naranja intenso)
+* **Paleta de Colores:**
+  * Fondo Principal: `#050505` (Negro profundo)
+  * Texto Principal: `#ffffff` (Blanco con opacidad)
+  * Acento Principal (Láser/Bordes): `#ffe81f` (Amarillo Star Wars)
+  * Acento Secundario (Hover/Brillos): `#ff6600` (Naranja intenso neón)
+* **Tipografías:** (Importadas vía Google Fonts)
+  * *Pathway Gothic One:* Títulos principales.
+  * *Inter:* Textos descriptivos y lectura.
+  * *Exo 2:* Navegación y Badges.
+* **Efectos:** Uso intensivo de `box-shadow` para simular resplanderes neón y transiciones fluidas de `transform: scale()`.
 
-Tipografía:** Utilizamos Google Fonts para lograr la estética Sci-Fi y mantener legibilidad:
-    * `Pathway Gothic One`: Utilizada para títulos principales y encabezados.
-    * `Inter`: Utilizada para los textos de lectura, biografías y descripciones.
-    * `Exo 2`: Aplicada en la navegación, menús y badges.
+---
 
-Iconografía:** Implementada a través de la librería `react-icons` (específicamente las colecciones de FontAwesome `Fa` y SimpleIcons `Si`).
+## 6. Funciones Dinámicas (JavaScript / React)
+Implementamos lógica avanzada en nuestros componentes utilizando los Hooks de React:
+* **`useParams`:** Utilizado en `Profile.jsx` para capturar el ID de la URL y renderizar de forma dinámica la tarjeta del tripulante exacto consumiendo el JSON local.
+* **`useState`:** Fundamental para el control de índices cíclicos en el `ProjectCarousel.jsx` y para el filtrado en tiempo real en `JsonExplorer.jsx`.
+* **`useEffect` + `fetch`:** Implementado en `ApiExplorer.jsx` para consumir la API pública de SWAPI (Planetas), gestionando los estados de loading, error y data con botones de paginación controlados.
+* **Event Listeners:** En `Gallery.jsx`, usamos `useEffect` para escuchar la tecla "Escape" y cerrar el Lightbox, limpiando el evento al desmontar el componente para evitar fugas de memoria.
 
-Efectos Visuales Clave:** Uso extensivo de `box-shadow` para simular resplandores de sables de luz, gradientes lineales dinámicos para los bordes de las tarjetas, y un fondo fijo (`::before`) que simula un campo estelar mediante un `radial-gradient`.
+### Capturas de Pantalla de la Plataforma
+Para ilustrar las funciones dinámicas del sistema, se capturaron las siguientes secciones del Panel de Comando (ubicadas en la carpeta [screenshots/](screenshots)):
 
-6. Lógica de JavaScript y Componentes React
-El proyecto no es solo visual, sino que implementa lógica dinámica en varios puntos clave:
+1. **Rutas Dinámicas (`useParams`)**  
+   ![Perfil Dinámico con useParams](screenshots/01-useparams.png)
+   
+2. **Carrusel de Proyectos de Tripulantes (`useState`)**  
+   ![Carrusel de Proyectos](screenshots/02-carrusel.png)
+   
+3. **Buscador de Naves en Tiempo Real (`.filter()`)**  
+   ![Buscador en Tiempo Real](screenshots/03-buscador-local.png)
+   
+4. **Consumo e Integración de SWAPI (`fetch`)**  
+   ![Consumo de API Externa](screenshots/04-api-planets.png)
+   
+5. **Galería Modal con Listener de Teclado (`Escape`)**  
+   ![Galería Lightbox](screenshots/05-lightbox-esc.png)
 
-useParams: Lo utilizamos en el componente Profile.jsx para atrapar el ID en la URL (/perfil/:id) y filtrar nuestro archivo JSON, renderizando dinámicamente el perfil correspondiente sin recargar la página.
+---
 
-useState: Aplicado para gestionar el carrusel de proyectos dentro de los perfiles individuales (manejando el índice actual de la imagen visualizada) y para el motor de búsqueda en tiempo real.
+## 7. Evolución del Proyecto (De TP1 a TP2)
+El paso de HTML/CSS estático a una SPA con React fue un salto arquitectónico:
+* **Componentización:** Eliminamos la redundancia de código HTML creando componentes reutilizables (Ej: una sola vista `Profile.jsx` reemplaza múltiples archivos HTML estáticos).
+* **Enrutamiento:** Reemplazamos los enlaces estáticos tradicionales por React Router, logrando una navegación instantánea sin recargas de página.
+* **Manejo de Datos:** Migramos la información hardcodeada a estructuras de datos JSON y a consumos asíncronos de APIs externas, haciendo la web 100% escalable.
 
-Mapeo de Datos: Utilizamos .map() extensamente en el Dashboard para iterar sobre nuestro JSON y generar múltiples instancias del componente <TripulanteCard />.
+---
 
-[Acá insertaremos capturas de pantalla del código de estas funciones dinámicas y de los componentes clave de la UI]
-
-7. Evolución del Proyecto (De HTML a React)
-Este Trabajo Práctico representa una evolución radical respecto a nuestra entrega anterior.
-En el TP1, maquetamos un diseño centrado en una temática oscura de Star Wars, usando HTML estático, CSS puro y animaciones láser. Para esta etapa, migramos toda la estructura visual y conceptual hacia una arquitectura de componentes.
-Limpiamos el código, descartamos las rutas estáticas (.html) y adoptamos el enrutamiento dinámico. Además, depuramos la lista de integrantes originales para reflejar al equipo definitivo de desarrollo, asegurando que la interfaz esté 100% enfocada en una presentación profesional tipo agencia tecnológica.
-
-[Acá agregaremos capturas del "Antes" (TP1 Star Wars) y el "Después" (TP2 Minimalista)]
-
-8. Uso de Inteligencia Artificial (IA)
-Durante el desarrollo, integramos la IA como una herramienta de apoyo y pair-programming, manteniendo en todo momento el control de la autoría y la arquitectura lógica del proyecto.
-
-Herramientas Utilizadas: Gemini.
-
-Uso en Código y Contenido: Se utilizó para agilizar la refactorización de etiquetas HTML clásicas a componentes de sintaxis JSX. También fue vital para establecer la base lógica del hook useState en la creación del carrusel interactivo y estructurar los mocks de datos (JSON) con contenido realista.
-
-Generación de Imágenes (Avatares): Los avatares originales de la temática Star Wars fueron reemplazados por renders 3D premium generados por IA.
+## 8. Uso de Inteligencia Artificial
+Se integró la Inteligencia Artificial como asistente de desarrollo y auditoría UX, manteniendo el equipo la toma de decisiones arquitectónicas:
+* **Modelos Utilizados:** Gemini 1.5 y ChatGPT (GPT-4o / Asistentes personalizados).
+* **Generación de Contenido e Imágenes:** Los avatares originales fueron reemplazados por renders 3D generados con IA mediante prompts temáticos Sci-Fi. Los mocks de datos de naves espaciales (JSON) fueron enriquecidos con ayuda de IA.
+* **Auditoría de Código y UX (Debugging):** Utilizamos IA para realizar auditorías estáticas del código, lo que nos ayudó a refactorizar el escuchador de eventos del teclado en el Lightbox, optimizar las dependencias de los `useEffect` para prevenir bucles infinitos, y estructurar el sistema offline de imágenes de planetas con lógica cíclica y de fallbacks.
