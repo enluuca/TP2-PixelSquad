@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-/**
- * ProgressBar Component
- * Renders a skill progress bar that animates from 0 to its target value upon mounting.
- * Complies strictly with University Rubric Requirement 3.
- */
+// Este componente dibuja la barra de progreso animada para las habilidades del perfil.
+// Empieza en 0% y con un timer sube hasta el porcentaje real para que se vea el efecto de carga.
 export default function ProgressBar({ nombre, nivel }) {
   const [currentWidth, setCurrentWidth] = useState(0);
 
   useEffect(() => {
-    // Start animation shortly after component mounts
+    // Le metemos un delay re cortito (150ms) al renderizarse para que se note la animación de llenado de la barra.
     const timer = setTimeout(() => {
       setCurrentWidth(nivel);
     }, 150);
@@ -31,7 +28,7 @@ export default function ProgressBar({ nombre, nivel }) {
             '--target-width': `${nivel}%`
           }}
         >
-          {/* Luz de barrido interna */}
+          {/* Un destello de luz con animación barrido para que quede más fachero */}
           <div className="progress-bar-scan"></div>
         </div>
       </div>

@@ -10,22 +10,20 @@ import {
 } from 'react-icons/fa';
 import { SiVite, SiSpringboot, SiMysql, SiFigma } from 'react-icons/si';
 
-/**
- * Profile Component
- * Renders individual member details, animated progress bars, and an interactive portfolio.
- * Complies strictly with University Rubric Requirements 3 & 5.
- */
+// Este componente dibuja el perfil completo de cada integrante.
+// Carga los datos dinámicos, las barritas animadas, el carrusel de proyectos y los gustos personales.
+// Todo sacado del JSON de forma automática según el ID de la URL.
 export default function Profile() {
   const { id } = useParams();
   const [showExtra, setShowExtra] = useState(false);
 
-  // Find user by ID in JSON local database
+  // Buscamos al integrante por su ID dentro de nuestro archivo JSON local
   const user = teamData.find(member => member.id === id);
 
-  // Redirect to Dashboard if member is not found
+  // Si por alguna razón la URL tiene un ID inventado o que no existe, lo mandamos al dashboard
   if (!user) return <Navigate to="/" />;
 
-  // Tech Stack Icon Mapper to ensure at least 5 icons are displayed dynamically
+  // Mapeador de tecnologías a iconos para mostrar los logos de las tecnologías del integrante
   const getTechIcons = (habilidades) => {
     const iconMap = {
       'react': <FaReact key="react" title="React" />,
@@ -73,7 +71,7 @@ export default function Profile() {
       }
     });
 
-    // Fallback list to guarantee a minimum of 5 tech icons
+    // Iconos de relleno para que la grilla siempre tenga al menos 5 logos y no quede un hueco feo en el diseño
     const fallbacks = [
       <FaLaptopCode key="fallback-code" title="Software Development" />,
       <SiVite key="fallback-vite" title="Vite Build Tool" />,
@@ -96,11 +94,11 @@ export default function Profile() {
 
   return (
     <section key={id} className="profile-section fade-in">
-      {/* Botón de retorno al Panel de Control */}
+      {/* Botón estilo galáctico para volver a la pantalla de inicio */}
       <Link to="/" className="back-btn-galactic">
         <FaArrowLeft /> Volver a la Lista de Tripulantes
       </Link>
-      {/* Cabecera del Perfil estilo Archivo Galáctico */}
+      {/* Cabecera del perfil con la foto y los datos principales del integrante */}
       <header className="profile-header-galactic">
         <div className="profile-avatar-container">
           <img
@@ -120,7 +118,7 @@ export default function Profile() {
 
           <p className="profile-bio-text">{user.bio}</p>
 
-          {/* Sección Interactiva: Mostrar más sobre mí (Easter Egg del TP1) */}
+          {/* Sección interactiva: El easter egg del TP1 para ver info extra del integrante */}
           {user.infoExtra && (
             <div className="extra-info-container-galactic">
               <button 
@@ -137,7 +135,7 @@ export default function Profile() {
             </div>
           )}
 
-          {/* Redes Sociales Dinámicas con Hover Avanzado */}
+          {/* Tarjetitas interactivas para ir a sus redes sociales (GitHub y LinkedIn) */}
           <div className="social-links-galactic">
             <a
               href={user.github}
@@ -160,7 +158,7 @@ export default function Profile() {
       </header>
 
       <div className="profile-grid-galactic">
-        {/* Columna Izquierda: Tech Stack y Habilidades */}
+        {/* Columna izquierda: Logos del stack y las barras de progreso animadas */}
         <div className="profile-column-galactic">
           <h3 className="section-title-galactic">Tech Stack</h3>
           <div className="tech-stack-galactic">
@@ -179,11 +177,11 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* Columna Derecha: Proyectos e Intereses */}
+        {/* Columna derecha: Carrusel de proyectos e intereses del integrante */}
         <div className="profile-column-galactic">
           <h3 className="section-title-galactic">Sistemas Desplegados</h3>
           
-          {/* Componente Portafolio Manual Interactiva */}
+          {/* El componente del carrusel interactivo para ir pasando sus proyectos */}
           <ProjectCarousel proyectos={user.proyectos} />
 
           <h3 className="section-title-galactic mt-4">Registros de Interés</h3>
@@ -206,7 +204,7 @@ export default function Profile() {
             </div>
           </div>
 
-          {/* Aclaración de Discos Favoritos (Fuera de la grilla para preservar simetría visual) */}
+          {/* Tarjeta destacada de anécdota musical para que ocupe todo el ancho y no rompa la simetría */}
           {user.intereses.musicaSubtitulo && (
             <div className="music-clarification-block-galactic fade-in">
               <p className="music-subtitle-galactic">

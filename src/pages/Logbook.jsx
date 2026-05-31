@@ -1,12 +1,8 @@
 import React from 'react';
 
-/**
- * Logbook Component (Bitácora de Desarrollo)
- * Outlines the engineering justification of migrating from standard HTML/CSS to React SPA.
- * Visualizes the project's Component Rendering Tree graphically using themed glowing border divs.
- * Includes complete documentation on team roles and GitFlow/Trello agile workflow.
- * Complies strictly with University Rubric Requirement 7.
- */
+// Este componente dibuja la Bitácora de la materia.
+// Explica por qué pasamos el TP1 a React SPA, documenta los roles del grupo, la metodología Kanban,
+// el flujo de Git con ramas, y arma un árbol visual interactivo con todos los componentes del proyecto.
 export default function Logbook() {
   return (
     <section className="logbook-section fade-in">
@@ -16,7 +12,7 @@ export default function Logbook() {
       </header>
 
       <div className="logbook-layout">
-        {/* Sección 1: Justificación de la Migración SPA */}
+        {/* Bloque 1: Por qué migramos la web a una SPA con React y Vite */}
         <article className="logbook-card-galactic">
           <h2 className="logbook-card-title">💾 Justificación de Migración (HTML a React SPA)</h2>
           <div className="logbook-text-content">
@@ -50,7 +46,7 @@ export default function Logbook() {
           </div>
         </article>
 
-        {/* Sección 2: Documentación Técnica de Roles y Flujo de Trabajo (GitFlow / Trello) */}
+        {/* Bloque 2: Cómo nos organizamos, roles del grupo, Trello y GitFlow */}
         <article className="logbook-card-galactic">
           <h2 className="logbook-card-title">👥 Organización Técnica, Roles y Flujo de Trabajo (GitFlow y Kanban)</h2>
           <div className="logbook-text-content">
@@ -104,7 +100,7 @@ export default function Logbook() {
           </div>
         </article>
 
-        {/* Sección 3: Árbol de Renderizado del Sistema */}
+        {/* Bloque 3: Estructura jerárquica de componentes (el arbolito) */}
         <article className="logbook-card-galactic">
           <h2 className="logbook-card-title">🌳 Árbol de Renderizado del Sistema</h2>
           <p className="logbook-subtitle">
@@ -112,17 +108,17 @@ export default function Logbook() {
           </p>
 
           <div className="tree-diagram-container">
-            {/* Nodo App */}
+            {/* El componente raíz App.jsx */}
             <div className="tree-node root-node">
               <span className="node-type">Raíz</span>
               <h4>App.jsx</h4>
               <p className="node-details">Enrutador y Contenedor Layout</p>
             </div>
 
-            {/* Conector Principal */}
+            {/* Línea conectora del árbol */}
             <div className="tree-connector-vertical"></div>
 
-            {/* Nivel 1: Sidebar y Main Routes */}
+            {/* Nivel 1: Sidebar fija y el ruteador principal */}
             <div className="tree-row">
               <div className="tree-node sidebar-node">
                 <span className="node-type">Componente</span>
@@ -137,13 +133,13 @@ export default function Logbook() {
               </div>
             </div>
 
-            {/* Conectores hacia las vistas */}
+            {/* Conectores hacia las distintas páginas */}
             <div className="tree-connector-hub"></div>
 
-            {/* Nivel 2: Vistas Principales (Pages) */}
+            {/* Nivel 2: Todas las páginas ruteadas de la SPA */}
             <div className="tree-row flex-wrap">
               
-              {/* Nodo Dashboard */}
+              {/* Página de Inicio (Dashboard) y su componente hijo */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/)</span>
                 <h4>Dashboard.jsx</h4>
@@ -155,7 +151,7 @@ export default function Logbook() {
                 </div>
               </div>
 
-              {/* Nodo Perfil */}
+              {/* Página de Perfil y sus componentes hijos para habilidades y proyectos */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/perfil/:id)</span>
                 <h4>Profile.jsx</h4>
@@ -173,7 +169,7 @@ export default function Logbook() {
                 </div>
               </div>
 
-              {/* Nodo Explorador Local */}
+              {/* Buscador de naves con el JSON local */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/explorador)</span>
                 <h4>JsonExplorer.jsx</h4>
@@ -185,7 +181,7 @@ export default function Logbook() {
                 </div>
               </div>
 
-              {/* Nodo Explorador API */}
+              {/* Buscador de planetas con la API externa */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/api-explorer)</span>
                 <h4>ApiExplorer.jsx</h4>
@@ -197,7 +193,7 @@ export default function Logbook() {
                 </div>
               </div>
 
-              {/* Nodo Galería */}
+              {/* Galería de fotos y su efecto Lightbox */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/galeria)</span>
                 <h4>Gallery.jsx</h4>
@@ -209,7 +205,7 @@ export default function Logbook() {
                 </div>
               </div>
 
-              {/* Nodo Bitácora */}
+              {/* Esta misma página de Bitácora */}
               <div className="tree-node page-node active-node">
                 <span className="node-type">Página (/bitacora)</span>
                 <h4>Logbook.jsx</h4>

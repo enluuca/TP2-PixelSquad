@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-/**
- * Gallery Component
- * Renderiza una grilla CSS Grid de imágenes Sci-Fi locales.
- * Incorpora un visor Lightbox con navegación interna cíclica (Prev/Next),
- * cierre con tecla ESC, controles táctiles y zoom con un clic.
- * Cumple de forma estricta con el Requisito 6 de la Rúbrica.
- */
+// Este es el componente de la Galería de fotos del equipo.
+// Dibuja una grilla con imágenes espaciales copadas y te abre un Lightbox (modal) al hacer clic.
+// Podés navegar con las flechitas, hacer zoom con un clic, o cerrar con la tecla Escape.
 export default function Gallery() {
   const [activeImageIdx, setActiveImageIdx] = useState(null);
   const [isZoomed, setIsZoomed] = useState(false);
@@ -62,7 +58,7 @@ export default function Gallery() {
     }
   ];
 
-  // Escuchar el teclado para control avanzado del Lightbox (Cierre y Flechas)
+  // Este useEffect escucha las teclas Escape, Flecha Izquierda y Derecha para controlar el modal de fotos
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (activeImageIdx === null) return;
@@ -121,7 +117,7 @@ export default function Gallery() {
         <p>Muestras visuales de alta fidelidad. Haz clic en un panel para activar el visor Lightbox (Presiona ESC para cerrar, Flechas ← / → para navegar).</p>
       </header>
 
-      {/* Grilla responsiva de imágenes locales */}
+      {/* Renderizamos la grilla con todas las fotos locales de la galeria */}
       <div className="gallery-grid-galactic">
         {images.map((img, index) => (
           <div 
@@ -140,7 +136,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* Modal Lightbox con Controles de Flecha y Clic de Zoom */}
+      {/* El visor modal que se superpone a toda la pantalla */}
       {activeImageIdx !== null && activeImage && (
         <div 
           className="lightbox-overlay" 
@@ -148,7 +144,7 @@ export default function Gallery() {
           aria-modal="true"
           role="dialog"
         >
-          {/* Botón de Cierre */}
+          {/* Botón cruz para cerrar el modal */}
           <button 
             className="lightbox-close-btn" 
             onClick={closeLightbox}
@@ -157,7 +153,7 @@ export default function Gallery() {
             &times;
           </button>
 
-          {/* Flecha Anterior */}
+          {/* Flechita para ir a la imagen anterior */}
           <button 
             className="lightbox-arrow-btn prev-btn" 
             onClick={prevImage}
@@ -186,7 +182,7 @@ export default function Gallery() {
             </div>
           </div>
 
-          {/* Flecha Siguiente */}
+          {/* Flechita para ir a la siguiente imagen */}
           <button 
             className="lightbox-arrow-btn next-btn" 
             onClick={nextImage}

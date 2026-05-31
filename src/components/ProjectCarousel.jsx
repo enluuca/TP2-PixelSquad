@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-/**
- * ProjectCarousel Component
- * Manages slide index via state and allows cyclical manual navigation.
- * Complies strictly with University Rubric Requirement 3 (Manual project gallery).
- */
+// Este componente dibuja el carrusel de proyectos de cada integrante.
+// Maneja el índice de la diapositiva activa en el estado y nos permite pasar de forma manual y cíclica.
 export default function ProjectCarousel({ proyectos }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -29,7 +26,7 @@ export default function ProjectCarousel({ proyectos }) {
   return (
     <div className="carousel-wrapper-galactic">
       <div className="carousel-container-galactic">
-        {/* Flecha Izquierda */}
+        {/* Botón de flecha izquierda para retroceder de proyecto */}
         <button 
           className="carousel-arrow-btn prev" 
           onClick={prevSlide}
@@ -38,7 +35,7 @@ export default function ProjectCarousel({ proyectos }) {
           &#10094;
         </button>
 
-        {/* Contenido Diapositiva */}
+        {/* Tarjeta del proyecto con su imagen y descripción */}
         <div className="carousel-slide-galactic">
           <img 
             src={currentProject.imagen || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=500&auto=format&fit=crop"} 
@@ -51,7 +48,7 @@ export default function ProjectCarousel({ proyectos }) {
           </div>
         </div>
 
-        {/* Flecha Derecha */}
+        {/* Botón de flecha derecha para avanzar de proyecto */}
         <button 
           className="carousel-arrow-btn next" 
           onClick={nextSlide}
@@ -61,7 +58,7 @@ export default function ProjectCarousel({ proyectos }) {
         </button>
       </div>
 
-      {/* Indicadores de Posición */}
+      {/* Los puntitos de abajo para ver cuántas diapositivas hay y poder hacer clic para saltar a una */}
       <div className="carousel-dots-galactic">
         {proyectos.map((_, index) => (
           <span

@@ -1,5 +1,5 @@
 import TripulanteCard from '../components/TripulanteCard';
-// Importamos el JSON que creamos antes
+// Acá traemos los datos de todos los integrantes del grupo desde el team.json
 import teamData from '../data/team.json'; 
 
 export default function Dashboard() {
@@ -10,7 +10,7 @@ export default function Dashboard() {
         <p>Seleccioná un perfil para ver el progreso y stack tecnológico.</p>
       </header>
 
-      {/* Grilla dinámica de tarjetas */}
+      {/* Mapeamos el JSON para renderizar una tarjetita por cada compañero de PixelSquad */}
       <div className="dashboard-grid">
         {teamData.map((tripulante) => (
           <TripulanteCard 

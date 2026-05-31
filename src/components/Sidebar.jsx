@@ -3,15 +3,12 @@ import { NavLink } from 'react-router-dom';
 import isoTipo from '../assets/iso-tipo.png';
 import logoTipo from '../assets/logo-tipo.png';
 
-/**
- * Sidebar Component
- * Fixed side navigation displaying the brand logo and links to all application routes.
- * Complies with TP2 Navigation and Branding guidelines.
- */
+// Este componente es el menú lateral (o cabecera responsive).
+// Sirve para mostrar los logos del grupo y los links para movernos por toda la app.
 export default function Sidebar() {
   return (
     <aside className="sidebar">
-      {/* Isologotipo de PixelSquad */}
+      {/* Acá cargamos las imágenes del logo e isotipo de nuestro equipo (PixelSquad) */}
       <div className="sidebar-logo-container">
         <picture className="navbar-section-picture">
           <img src={isoTipo} alt="Marca PixelSquad" className="iso-tipo" />
@@ -21,7 +18,7 @@ export default function Sidebar() {
         </picture>
       </div>
 
-      {/* Menú Principal de Comando */}
+      {/* La botonera principal con los NavLinks de React Router */}
       <nav className="menu-principal">
         <ul>
           <li>

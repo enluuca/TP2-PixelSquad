@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import starships from '../data/starships.json';
 
-/**
- * JsonExplorer Component
- * Renders local Star Wars starship database (20 objects) with real-time text filtering.
- * Complies strictly with University Rubric Requirement 4.
- */
+// Este componente arma el buscador de naves usando el JSON local con las 20 naves.
+// Permite buscar por texto (nombre, modelo o fabricante) y filtrar por la clase de nave en tiempo real.
 export default function JsonExplorer() {
   const [searchTerm, setSearchTerm] = useState('');
   const [classFilter, setClassFilter] = useState('Todos');
 
-  // Unified real-time filter logic
+  // Filtramos las naves combinando la barra de búsqueda y el dropdown de clases al mismo tiempo
   const filteredStarships = starships.filter((ship) => {
     const matchesSearch = 
       ship.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -22,7 +19,7 @@ export default function JsonExplorer() {
     return matchesSearch && matchesClass;
   });
 
-  // Extract unique classes for the dropdown filter dynamically
+  // Generamos la lista de clases únicas para cargarlas en el select de filtros dinámicamente
   const uniqueClasses = ['Todos', ...new Set(starships.map(ship => ship.clase))];
 
   return (
@@ -32,7 +29,7 @@ export default function JsonExplorer() {
         <p>Registros imperiales encriptados (Base de Datos Local JSON - 20 Objetos).</p>
       </header>
 
-      {/* Controles de Búsqueda y Filtrado */}
+      {/* Los controles para filtrar: el input de texto y el select de clases */}
       <div className="filters-container">
         <input 
           type="text" 
@@ -53,12 +50,12 @@ export default function JsonExplorer() {
         </select>
       </div>
 
-      {/* Cantidad de Resultados */}
+      {/* Contador de resultados encontrados en la búsqueda */}
       <div className="results-count-galactic">
         Se encontraron <span className="neon-text">{filteredStarships.length}</span> naves en los sensores.
       </div>
 
-      {/* Grilla de Resultados */}
+      {/* La grilla donde mostramos las naves filtradas o el aviso de vacío */}
       <div className="results-grid">
         {filteredStarships.length > 0 ? (
           filteredStarships.map((ship) => (
