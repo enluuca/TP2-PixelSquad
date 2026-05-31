@@ -1752,13 +1752,13 @@ h3 {
     font-size: 1.5rem;
   }
 
-  /* Responsive para la bitácora (Celu)*/
+  /* Responsive para la bitácora (Celu) */
   .logbook-card-galactic {
-    padding: 1.2rem;
+    padding: 1.2rem 1rem;
   }
 
   .logbook-card-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .logbook-text-content {
@@ -1766,7 +1766,7 @@ h3 {
   }
 
   .logbook-text-content ul {
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
   }
 
   /* El árbol se transforma de flujo horizontal a una hermosa cascada vertical */
@@ -1774,20 +1774,34 @@ h3 {
     padding: 1rem 0;
     overflow-x: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .tree-row {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    width: 100%;
+    gap: 1.2rem;
+    width: 100% !important;
   }
 
   .tree-node {
-    width: 100%;
-    max-width: 260px;
-    min-width: auto;
-    padding: 1rem 1.2rem;
+    width: 100% !important;
+    max-width: 290px !important;
+    min-width: auto !important;
+    padding: 1rem !important;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* Los componentes hijos anidados */
+  .child-node {
+    min-width: auto !important;
+    width: 100% !important;
+    padding: 0.6rem 0.8rem !important;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
 
   /* Ocultamos el conector horizontal gigante en celulares */
@@ -1799,28 +1813,36 @@ h3 {
   .tree-row::before {
     content: '';
     width: 2px;
-    height: 30px;
+    height: 25px;
     background: linear-gradient(180deg, rgb(var(--yellow)), rgb(var(--orange)));
     box-shadow: 0 0 8px rgba(var(--orange), 0.5);
-    margin: 0 auto;
+    margin: 0.5rem auto;
     display: block;
   }
 
   .tree-connector-vertical {
-    height: 30px;
+    height: 25px;
+    margin: 0.5rem auto;
   }
 
   .flex-wrap {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
   }
 
-  /* Subnodos o componentes hijos alineados en columna */
+  /* Subnodos o componentes hijos alineados en columna y con anchos correctos */
   .sub-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    margin-top: 0.8rem !important;
+    width: 100% !important;
+  }
+
+  .tree-connector-sub {
+    height: 15px;
+    margin: 4px auto;
   }
 }
