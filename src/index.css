@@ -1,4 +1,3 @@
-
 /*1. IMPORTACIÓN DE FUENTES (Google Fonts del TP1)*/
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap');
 
@@ -9,7 +8,7 @@
   --orange: 255, 102, 0;
   --dark: 5, 5, 5;
   --white: 255, 255, 255;
-  
+
   /* Variables semánticas */
   --color-bg: rgb(var(--dark));
   --color-accent: rgb(var(--yellow));
@@ -17,7 +16,7 @@
   --color-text: rgba(var(--white), 0.88);
   --color-text-muted: rgba(var(--white), 0.63);
   --color-surface: rgba(var(--dark), 0.8);
-  
+
   --radius: 15px;
   --transition: all 0.3s ease;
 }
@@ -50,7 +49,9 @@ body::before {
 }
 
 /* Tipografía de Títulos Generales */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Pathway Gothic One', sans-serif;
   color: var(--color-accent);
   text-shadow: 0 0 10px rgba(var(--yellow), 0.5);
@@ -98,7 +99,8 @@ h1, h2, h3 {
   border-bottom: 1px solid rgba(var(--yellow), 0.3);
 }
 
-.iso-tipo, .logo-tipo {
+.iso-tipo,
+.logo-tipo {
   width: 100%;
   object-fit: contain;
   filter: drop-shadow(0 0 5px rgba(var(--yellow), 0.5));
@@ -125,7 +127,7 @@ h1, h2, h3 {
   transition: var(--transition);
 }
 
-.menu-principal a:hover, 
+.menu-principal a:hover,
 .menu-principal a.active-link {
   background-color: var(--color-accent);
   color: var(--color-bg);
@@ -133,15 +135,17 @@ h1, h2, h3 {
 }
 
 /*5. TARJETAS COMPARTIDAS (DASHBOARD Y EXPLORADOR)*/
-.dashboard-grid, .results-grid {
+.dashboard-grid,
+.results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 6rem;
   justify-content: center;
   margin-top: 10rem;
 }
+
 /* PERFILES */
-.card{
+.card {
   background: var(--color-surface);
   backdrop-filter: blur(8px);
   border: 1px solid var(--color-accent);
@@ -154,6 +158,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
 }
+
 /* PELÍCULAS */
 .data-card {
   background: var(--color-surface);
@@ -165,21 +170,23 @@ h1, h2, h3 {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   gap: 1.2rem;
 }
 
-.card:hover, .data-card:hover {
+.card:hover,
+.data-card:hover {
   transform: translateY(-10px);
   border-color: var(--color-accent);
   box-shadow: 0 10px 30px rgba(var(--yellow), 0.6);
 }
 
 /* Efecto láser superior */
-.card::before, .data-card::before {
+.card::before,
+.data-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -191,7 +198,8 @@ h1, h2, h3 {
   transition: transform 0.5s;
 }
 
-.card:hover::before, .data-card:hover::before {
+.card:hover::before,
+.data-card:hover::before {
   transform: translateX(100%);
 }
 
@@ -223,7 +231,8 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
-.card-content .rol, .data-stats p {
+.card-content .rol,
+.data-stats p {
   color: var(--color-text-muted);
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
@@ -234,7 +243,8 @@ h1, h2, h3 {
 }
 
 /* Botones estilo sable de luz */
-.btn-ver-perfil, .social-btn-galactic {
+.btn-ver-perfil,
+.social-btn-galactic {
   display: inline-block;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-strong));
   color: var(--color-bg);
@@ -250,7 +260,8 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.btn-ver-perfil:hover, .social-btn-galactic:hover {
+.btn-ver-perfil:hover,
+.social-btn-galactic:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(var(--yellow), 0.5);
   color: var(--color-bg);
@@ -455,7 +466,7 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
   padding: 2rem 1.5rem 1.5rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.95));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
   color: var(--color-white);
   text-align: left;
 }
@@ -498,8 +509,13 @@ h1, h2, h3 {
   box-shadow: 0 0 10px var(--color-accent);
 }
 
-.carousel-arrow-btn.prev { left: 15px; }
-.carousel-arrow-btn.next { right: 15px; }
+.carousel-arrow-btn.prev {
+  left: 15px;
+}
+
+.carousel-arrow-btn.next {
+  right: 15px;
+}
 
 .carousel-dots-galactic {
   display: flex;
@@ -589,7 +605,8 @@ h1, h2, h3 {
   margin-bottom: 3rem;
 }
 
-.search-input, .role-select {
+.search-input,
+.role-select {
   background: var(--color-surface);
   border: 1px solid var(--color-accent);
   border-radius: 8px;
@@ -601,7 +618,8 @@ h1, h2, h3 {
   flex: 1;
 }
 
-.search-input:focus, .role-select:focus {
+.search-input:focus,
+.role-select:focus {
   outline: none;
   box-shadow: 0 0 15px rgba(var(--yellow), 0.3);
   background: rgba(var(--dark), 0.98);
@@ -643,12 +661,21 @@ h1, h2, h3 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fillBar {
-  to { width: var(--target-width); }
+  to {
+    width: var(--target-width);
+  }
 }
 
 /* ==========================================
@@ -684,10 +711,23 @@ h1, h2, h3 {
 }
 
 @keyframes barScan {
-  0% { left: -60px; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+  0% {
+    left: -60px;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 /* Starship Local Explorer */
@@ -774,8 +814,13 @@ h1, h2, h3 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .error-card-galactic {
@@ -1025,8 +1070,15 @@ h1, h2, h3 {
 }
 
 @keyframes scaleUp {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .lightbox-img-full {
@@ -1363,7 +1415,8 @@ h1, h2, h3 {
   position: relative;
   border-top-left-radius: 19px;
   border-top-right-radius: 19px;
-  margin-top: -2rem; /* matches padding offset */
+  margin-top: -2rem;
+  /* matches padding offset */
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   margin-bottom: 1rem;
@@ -1378,8 +1431,10 @@ h1, h2, h3 {
 
 .planet-card .char-card-img {
   object-fit: contain;
-  background-color: #050505; /* matches card deep space background */
-  padding: 0.5rem; /* gives safety margins so sphere doesn't clip */
+  background-color: #050505;
+  /* matches card deep space background */
+  padding: 0.5rem;
+  /* gives safety margins so sphere doesn't clip */
 }
 
 .char-card:hover .char-card-img {
@@ -1416,12 +1471,14 @@ h1, h2, h3 {
 }
 
 .data-stats p {
-  margin-bottom: 0 !important; /* overrides global 1.5rem bottom margin */
+  margin-bottom: 0 !important;
+  /* overrides global 1.5rem bottom margin */
   line-height: 1.4;
 }
 
 /* Fix broken or unmounted images display inside cards */
-.starship-card-img, .char-card-img {
+.starship-card-img,
+.char-card-img {
   min-height: 180px;
   background-color: #1a1a1a;
 }
@@ -1521,6 +1578,7 @@ h1, h2, h3 {
    ================================================== */
 
 @media (max-width: 1024px) {
+
   /* Layout Switch to Column */
   .app-container {
     flex-direction: column;
@@ -1587,7 +1645,8 @@ h1, h2, h3 {
   }
 
   /* Reset huge margins on responsive pages */
-  .dashboard-grid, .results-grid {
+  .dashboard-grid,
+  .results-grid {
     margin-top: 2.5rem;
     gap: 2.5rem;
   }
@@ -1609,7 +1668,8 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
   }
 
-  .personal-details-galactic, .social-links-galactic {
+  .personal-details-galactic,
+  .social-links-galactic {
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -1628,6 +1688,7 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+
   /* Stacks navigation on small mobile screens if items wrap */
   .sidebar {
     flex-direction: column;
@@ -1648,7 +1709,8 @@ h1, h2, h3 {
   }
 
   /* Force vertical grids to center and fit phone viewport */
-  .dashboard-grid, .results-grid {
+  .dashboard-grid,
+  .results-grid {
     grid-template-columns: 1fr !important;
     max-width: 340px;
     margin: 2rem auto 0 auto;
@@ -1661,7 +1723,8 @@ h1, h2, h3 {
     padding: 0 1rem;
   }
 
-  .search-input, .role-select {
+  .search-input,
+  .role-select {
     width: 100% !important;
   }
 
@@ -1688,9 +1751,76 @@ h1, h2, h3 {
     right: 15px;
     font-size: 1.5rem;
   }
+
+  /* Responsive para la bitácora (Celu)*/
+  .logbook-card-galactic {
+    padding: 1.2rem;
+  }
+
+  .logbook-card-title {
+    font-size: 1.5rem;
+  }
+
+  .logbook-text-content {
+    font-size: 0.95rem;
+  }
+
+  .logbook-text-content ul {
+    margin-left: 0.8rem;
+  }
+
+  /* El árbol se transforma de flujo horizontal a una hermosa cascada vertical */
+  .tree-diagram-container {
+    padding: 1rem 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .tree-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .tree-node {
+    width: 100%;
+    max-width: 260px;
+    min-width: auto;
+    padding: 1rem 1.2rem;
+  }
+
+  /* Ocultamos el conector horizontal gigante en celulares */
+  .tree-connector-hub {
+    display: none;
+  }
+
+  /* En móviles, metemos un conector vertical simple entre las secciones del árbol */
+  .tree-row::before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(180deg, rgb(var(--yellow)), rgb(var(--orange)));
+    box-shadow: 0 0 8px rgba(var(--orange), 0.5);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .tree-connector-vertical {
+    height: 30px;
+  }
+
+  .flex-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Subnodos o componentes hijos alineados en columna */
+  .sub-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }
-
-
-
-
-

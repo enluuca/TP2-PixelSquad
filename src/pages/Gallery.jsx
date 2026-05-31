@@ -120,8 +120,8 @@ export default function Gallery() {
       {/* Renderizamos la grilla con todas las fotos locales de la galeria */}
       <div className="gallery-grid-galactic">
         {images.map((img, index) => (
-          <div 
-            key={img.id} 
+          <div
+            key={img.id}
             className="gallery-card-galactic"
             onClick={() => openLightbox(index)}
           >
@@ -138,15 +138,15 @@ export default function Gallery() {
 
       {/* El visor modal que se superpone a toda la pantalla */}
       {activeImageIdx !== null && activeImage && (
-        <div 
-          className="lightbox-overlay" 
+        <div
+          className="lightbox-overlay"
           onClick={closeLightbox}
           aria-modal="true"
           role="dialog"
         >
           {/* Botón cruz para cerrar el modal */}
-          <button 
-            className="lightbox-close-btn" 
+          <button
+            className="lightbox-close-btn"
             onClick={closeLightbox}
             aria-label="Cerrar visor"
           >
@@ -154,23 +154,23 @@ export default function Gallery() {
           </button>
 
           {/* Flechita para ir a la imagen anterior */}
-          <button 
-            className="lightbox-arrow-btn prev-btn" 
+          <button
+            className="lightbox-arrow-btn prev-btn"
             onClick={prevImage}
             aria-label="Imagen anterior"
           >
             &#10094;
           </button>
 
-          <div 
+          <div
             className="lightbox-content-container"
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="lightbox-img-wrapper" onClick={toggleZoom}>
-              <img 
-                src={activeImage.url} 
-                alt={activeImage.titulo} 
-                className={`lightbox-img-full ${isZoomed ? 'zoomed' : ''}`} 
+              <img
+                src={activeImage.url}
+                alt={activeImage.titulo}
+                className={`lightbox-img-full ${isZoomed ? 'zoomed' : ''}`}
               />
               <div className="zoom-hint">
                 {isZoomed ? "Click para reducir zoom" : "Click para hacer zoom"}
@@ -183,8 +183,8 @@ export default function Gallery() {
           </div>
 
           {/* Flechita para ir a la siguiente imagen */}
-          <button 
-            className="lightbox-arrow-btn next-btn" 
+          <button
+            className="lightbox-arrow-btn next-btn"
             onClick={nextImage}
             aria-label="Siguiente imagen"
           >

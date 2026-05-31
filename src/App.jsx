@@ -9,7 +9,7 @@ import Gallery from './pages/Gallery';
 import Logbook from './pages/Logbook';
 
 // Este es el componente principal que arranca toda la aplicación.
-// Acá armamos el layout general de la página y metemos las rutas de React Router para que sea una SPA.
+// Acá armamos el diseño base de la página y metemos las rutas de React Router para que sea una SPA.
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +32,7 @@ function App() {
             {/* El explorador de planetas consumiendo la API externa de Star Wars (SWAPI) */}
             <Route path="/api-explorer" element={<ApiExplorer />} />
             
-            {/* Galería de fotos del equipo con efecto lightbox interactivo */}
+            {/* Galería de fotos del equipo con efecto de visor modal interactivo */}
             <Route path="/galeria" element={<Gallery />} />
             
             {/* Bitácora de desarrollo y el árbol visual de renderizado hecho con HTML y CSS */}

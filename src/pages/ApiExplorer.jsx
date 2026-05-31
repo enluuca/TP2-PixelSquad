@@ -21,7 +21,7 @@ export default function ApiExplorer() {
     setLoading(true);
     setError(null);
 
-    // Hacemos fetch a una copia estable de SWAPI para que no se caiga ni tarde tanto en responder
+    // Hacemos la llamada/consulta a una copia estable de SWAPI para que no se caiga ni tarde tanto en responder
     fetch(`https://swapi.py4e.com/api/planets/?page=${page}`)
       .then((res) => {
         if (!res.ok) {
@@ -77,22 +77,22 @@ export default function ApiExplorer() {
           <div className="results-grid">
             {planets.slice(0, 9).map((planet, index) => {
               const planetId = getPlanetId(planet.url);
-              
+
               return (
                 <article key={index} className="data-card char-card planet-card">
                   <div className="char-img-container">
-                    <img 
-                      src={`/img/planetas/planeta${planetId}.jpg`} 
-                      alt={planet.name} 
+                    <img
+                      src={`/img/planetas/planeta${planetId}.jpg`}
+                      alt={planet.name}
                       className="char-card-img"
                       onError={(e) => {
                         const idNum = parseInt(planetId, 10);
                         const currentSrc = e.target.src;
-                        
+
                         // Como solo subimos 10 imágenes de planetas, si el ID es mayor a 10
                         // hacemos que vaya rotando usando el resto mod 10 (11 -> 1, 12 -> 2, etc.)
                         const fallbackId = ((idNum - 1) % 10) + 1;
-                        
+
                         if (idNum > 10 && !currentSrc.includes(`/planeta${fallbackId}.jpg`)) {
                           e.target.src = `/img/planetas/planeta${fallbackId}.jpg`;
                         } else {
@@ -128,7 +128,7 @@ export default function ApiExplorer() {
             >
               &#10094; Anterior
             </button>
-            
+
             <div className="page-indicator">
               Página <span className="neon-text">{page}</span> de 7
             </div>

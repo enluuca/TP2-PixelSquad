@@ -9,13 +9,13 @@ export default function JsonExplorer() {
 
   // Filtramos las naves combinando la barra de búsqueda y el dropdown de clases al mismo tiempo
   const filteredStarships = starships.filter((ship) => {
-    const matchesSearch = 
+    const matchesSearch =
       ship.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
       ship.modelo.toLowerCase().includes(searchTerm.toLowerCase()) ||
       ship.fabricante.toLowerCase().includes(searchTerm.toLowerCase());
-      
+
     const matchesClass = classFilter === 'Todos' || ship.clase === classFilter;
-    
+
     return matchesSearch && matchesClass;
   });
 
@@ -31,16 +31,16 @@ export default function JsonExplorer() {
 
       {/* Los controles para filtrar: el input de texto y el select de clases */}
       <div className="filters-container">
-        <input 
-          type="text" 
-          placeholder="Escribe el nombre, modelo o fabricante..." 
+        <input
+          type="text"
+          placeholder="Escribe el nombre, modelo o fabricante..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-input"
         />
 
-        <select 
-          value={classFilter} 
+        <select
+          value={classFilter}
           onChange={(e) => setClassFilter(e.target.value)}
           className="role-select"
         >

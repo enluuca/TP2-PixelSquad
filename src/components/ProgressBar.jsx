@@ -23,12 +23,12 @@ export default function ProgressBar({ nombre, nivel }) {
       <div className="progress-bar-bg">
         <div
           className="progress-bar-fill animate-progress"
-          style={{ 
+          style={{
             width: `${currentWidth}%`,
             '--target-width': `${nivel}%`
           }}
         >
-          {/* Un destello de luz con animación barrido para que quede más fachero */}
+          {/* Luz de barrido interna */}
           <div className="progress-bar-scan"></div>
         </div>
       </div>

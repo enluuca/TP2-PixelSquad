@@ -17,29 +17,29 @@ export default function Logbook() {
           <h2 className="logbook-card-title">💾 Justificación de Migración (HTML a React SPA)</h2>
           <div className="logbook-text-content">
             <p>
-              La transición desde una estructura estática multi-página basada en archivos <code>.html</code> tradicionales 
-              (desarrollada en el TP1) hacia una Single Page Application (SPA) modular bajo <strong>React y Vite</strong> 
+              La transición desde una estructura estática multi-página basada en archivos <code>.html</code> tradicionales
+              (desarrollada en el TP1) hacia una Single Page Application (SPA) modular bajo <strong>React y Vite</strong>
               responde a pilares clave de ingeniería de software modernos:
             </p>
             <ul>
               <li>
-                <strong>Eficiencia de Cómputo e Interfaz (Virtual DOM):</strong> React optimiza las actualizaciones visuales 
-                calculando diferencias en memoria antes de mutar el DOM real del navegador. Esto elimina los parpadeos de carga 
+                <strong>Eficiencia de Cómputo e Interfaz (Virtual DOM):</strong> React optimiza las actualizaciones visuales
+                calculando diferencias en memoria antes de mutar el DOM real del navegador. Esto elimina los parpadeos de carga
                 entre vistas y da una fluidez instantánea imperativa para interfaces avanzadas.
               </li>
               <li>
-                <strong>Componentización Reutilizable y Mantenibilidad:</strong> Elementos redundantes del TP1 (tales como la barra 
-                de navegación, las tarjetas de perfil y los botones) fueron encapsulados en componentes funcionales. Esto reduce 
+                <strong>Componentización Reutilizable y Mantenibilidad:</strong> Elementos redundantes del TP1 (tales como la barra
+                de navegación, las tarjetas de perfil y los botones) fueron encapsulados en componentes funcionales. Esto reduce
                 la duplicación de código en más de un 70%, simplifica la detección de errores y asegura la modularidad del código.
               </li>
               <li>
-                <strong>Estado Reactivo Centralizado (React Hooks):</strong> El uso de <code>useState</code> y <code>useEffect</code> 
-                permite sincronizar estados complejos de forma inmediata, posibilitando búsquedas fluidas en tiempo real, 
+                <strong>Estado Reactivo Centralizado (React Hooks):</strong> El uso de <code>useState</code> y <code>useEffect</code>
+                permite sincronizar estados complejos de forma inmediata, posibilitando búsquedas fluidas en tiempo real,
                 carruseles infinitos, animaciones sincronizadas al montaje, y el consumo asíncrono y paginado de APIs externas.
               </li>
               <li>
-                <strong>Enrutamiento del Lado del Cliente (React Router DOM):</strong> Sustituir los enlaces estáticos físicos por un 
-                enrutador virtual nos permite conservar estados globales (como la sesión, temas o música de fondo) sin interrupciones 
+                <strong>Enrutamiento del Lado del Cliente (React Router DOM):</strong> Sustituir los enlaces estáticos físicos por un
+                enrutador virtual nos permite conservar estados globales (como la sesión, temas o música de fondo) sin interrupciones
                 al cambiar de panel, imitando la experiencia fluida de una aplicación de escritorio nativa.
               </li>
             </ul>
@@ -51,34 +51,36 @@ export default function Logbook() {
           <h2 className="logbook-card-title">👥 Organización Técnica, Roles y Flujo de Trabajo (GitFlow y Kanban)</h2>
           <div className="logbook-text-content">
             <p>
-              Para llevar a cabo el desarrollo incremental de este TP2, el equipo <strong>PixelSquad</strong> adoptó un enfoque 
-              estructurado que combina metodologías ágiles y rigurosos estándares de control de versiones:
+              Durante la evolución de esta SPA, el equipo <strong>PixelSquad</strong> aplicó una metodología de trabajo colaborativo
+              simulando un entorno ágil profesional. Dividimos las tareas y responsabilidades según las fortalezas técnicas de cada uno
+              para optimizar el desarrollo, coordinando los entregas mediante tableros ágiles y controlando las versiones de forma rigurosa.
+              Esto nos permitió integrar los cambios mediante ramas independientes y automatizar el despliegue continuo mediante Vercel sin interrupciones:
             </p>
-            
+
             <h3 className="logbook-inner-subtitle">Roles del Escuadrón</h3>
             <ul>
               <li>
-                <strong>Enzo Giangreco (Frontend & UI/UX):</strong> Responsable principal de la maquetación responsiva, tipografías Sci-Fi, 
+                <strong>Enzo Giangreco (Frontend & UI/UX):</strong> Responsable principal de la maquetación responsiva, tipografías Sci-Fi,
                 paleta de variables CSS, componentes estructurales de navegación (<code>Sidebar</code>) y la unificación estética en <code>index.css</code>.
               </li>
               <li>
-                <strong>Pablo Off (Backend & Database Developer):</strong> Coordinador técnico de la gestión e integridad de los datos locales 
+                <strong>Pablo Off (Backend & Database Developer):</strong> Coordinador técnico de la gestión e integridad de los datos locales
                 (diseño de <code>team.json</code> y <code>starships.json</code>), modelado de estados complejos en React y la integración asíncrona de la API externa (SWAPI).
               </li>
               <li>
-                <strong>Alejandro Ramos (Java Developer Trainee):</strong> Encargado de la validación lógica, auditoría de código, aseguramiento de la 
+                <strong>Alejandro Ramos (Java Developer Trainee):</strong> Encargado de la validación lógica, auditoría de código, aseguramiento de la
                 consistencia sintáctica en componentes, y diseño del flujo de datos en el enrutador virtual de <code>App.jsx</code>.
               </li>
               <li>
-                <strong>Ivan Faigenbom (UX/UI & Python Developer):</strong> Responsable del prototipado interactivo de componentes visuales (como el Lightbox de la 
+                <strong>Ivan Faigenbom (UX/UI & Python Developer):</strong> Responsable del prototipado interactivo de componentes visuales (como el Lightbox de la
                 Galería y la lógica cíclica de proyectos en el portafolio) y el diseño de la arquitectura jerárquica del Árbol de Renderizado.
               </li>
             </ul>
 
             <h3 className="logbook-inner-subtitle mt-3">Gestión Ágil con Trello (Kanban)</h3>
             <p>
-              Establecimos un tablero <strong>Trello</strong> basado en la metodología Kanban con columnas de: <em>Backlog</em> (Requerimientos de la Rúbrica), 
-              <em>En Progreso</em> (Hojas de ruta activas), <em>En Revisión / QA</em> (Auditoría de código) e <em>Hecho (Done)</em>. Dividimos las tareas en tarjetas 
+              Establecimos un tablero <strong>Trello</strong> basado en la metodología Kanban con columnas de: <em>Backlog</em> (Requerimientos de la Rúbrica),
+              <em>En Progreso</em> (Hojas de ruta activas), <em>En Revisión / QA</em> (Auditoría de código) e <em>Hecho (Done)</em>. Dividimos las tareas en tarjetas
               con etiquetas temáticas de prioridad y asignaciones claras, realizando reuniones de sincronización semanales virtuales de 15 minutos para resolver bloqueos técnicos.
             </p>
 
@@ -100,9 +102,9 @@ export default function Logbook() {
           </div>
         </article>
 
-        {/* Bloque 3: Estructura jerárquica de componentes (el arbolito) */}
+        {/* Bloque 3: Estructura jerárquica de componentes */}
         <article className="logbook-card-galactic">
-          <h2 className="logbook-card-title">🌳 Árbol de Renderizado del Sistema</h2>
+          <h2 className="logbook-card-title">🌳 Estructura Jerárquica del Sistema</h2>
           <p className="logbook-subtitle">
             Representación esquemática de la jerarquía y flujo de datos de los componentes React en nuestra SPA:
           </p>
@@ -115,10 +117,10 @@ export default function Logbook() {
               <p className="node-details">Enrutador y Contenedor Layout</p>
             </div>
 
-            {/* Línea conectora del árbol */}
+            {/* Línea conectora de la estructura */}
             <div className="tree-connector-vertical"></div>
 
-            {/* Nivel 1: Sidebar fija y el ruteador principal */}
+            {/* Nivel 1: Menú lateral fijo y el ruteador principal */}
             <div className="tree-row">
               <div className="tree-node sidebar-node">
                 <span className="node-type">Componente</span>
@@ -136,9 +138,9 @@ export default function Logbook() {
             {/* Conectores hacia las distintas páginas */}
             <div className="tree-connector-hub"></div>
 
-            {/* Nivel 2: Todas las páginas ruteadas de la SPA */}
+            {/* Nivel 2: Todas las páginas enlazadas de la SPA */}
             <div className="tree-row flex-wrap">
-              
+
               {/* Página de Inicio (Dashboard) y su componente hijo */}
               <div className="tree-node page-node">
                 <span className="node-type">Página (/)</span>
@@ -200,8 +202,8 @@ export default function Logbook() {
                 <p className="node-details">Muestrario Visual</p>
                 <div className="tree-connector-sub"></div>
                 <div className="tree-node child-node">
-                  <h4>Lightbox + ESC</h4>
-                  <p className="node-details">Event keydown listener</p>
+                  <h4>Visor modal + ESC</h4>
+                  <p className="node-details">Escuchador del teclado</p>
                 </div>
               </div>
 
