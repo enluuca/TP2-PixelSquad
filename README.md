@@ -18,7 +18,7 @@ Este proyecto es una Single Page Application (SPA) desarrollada en React que fun
 ---
 
 ## 3. Tecnologías Utilizadas
-* **Core:** React 19, Vite, JavaScript (ES6+), HTML5, CSS3.
+* **Core:** React 19, Vite 8, JavaScript (ES6+), HTML5, CSS3.
 * **Enrutamiento:** React Router DOM.
 * **Iconografía:** `react-icons` (FontAwesome y SimpleIcons).
 * **Control de Versiones:** Git y GitHub (Flujo de trabajo mediante ramas).
@@ -98,5 +98,5 @@ El paso de HTML/CSS estático a una SPA con React fue un salto arquitectónico:
 ## 8. Uso de Inteligencia Artificial
 Se integró la Inteligencia Artificial como asistente de desarrollo y auditoría UX, manteniendo el equipo la toma de decisiones arquitectónicas:
 * **Modelos Utilizados:** Gemini 1.5 y ChatGPT (GPT-4o / Asistentes personalizados).
-* **Generación de Contenido e Imágenes:** Los avatares originales fueron reemplazados por renders 3D generados con IA mediante prompts temáticos Sci-Fi. Los mocks de datos de naves espaciales (JSON) fueron enriquecidos con ayuda de IA.
+* **Generación de Contenido:** Los mocks de datos locales de las naves espaciales (`starships.json`) fueron estructurados y enriquecidos con descripciones detalladas utilizando IA para potenciar la inmersión temática del proyecto. (Las imágenes de los avatares se mantuvieron de nuestra entrega del TP1).
 * **Auditoría de Código y UX (Debugging):** Utilizamos IA para realizar auditorías estáticas del código, lo que nos ayudó a refactorizar el escuchador de eventos del teclado en el Lightbox, optimizar las dependencias de los `useEffect` para prevenir bucles infinitos, y estructurar el sistema offline de imágenes de planetas con lógica cíclica y de fallbacks.
