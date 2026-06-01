@@ -12,8 +12,8 @@ Este proyecto es una Single Page Application (SPA) desarrollada en React que fun
 ## 2. Integrantes del Equipo
 * **Enzo Giangreco** - Full Stack Developer / Frontend & UI/UX | [Perfil de GitHub](https://github.com/enluuca)
 * **Pablo Off** - Backend & Database Developer | [Perfil de GitHub](https://github.com/Poff93)
-* **Alejandro Ramos** - Java Developer Trainee | [Perfil de GitHub]
-* **Ivan Faigenbom** - UX/UI & Python Developer | [Perfil de GitHub]
+* **Alejandro Ramos** - Java Developer Trainee | [Perfil de GitHub](https://github.com/AleR25)
+* **Ivan Faigenbom** - UX/UI & Python Developer | [Perfil de GitHub](https://github.com/ii-v-vi)
 
 ---
 
